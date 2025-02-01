@@ -47,6 +47,7 @@ class TodoController extends Controller
         $data = [
             'task'=>$request->input('task')
         ];
+        
 
         Todo::create($data);
         return redirect()->route('todo.app')->with('success', 'Berhasil Disimpan !');
